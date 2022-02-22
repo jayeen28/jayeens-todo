@@ -1,21 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Jayeen's Todo",
+  "name": "Be more productive with this todo application.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "jayeens-todo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "jayeens-todo-logo.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "250x55"
     },
     {
-      "src": "logo512.png",
+      "src": "jayeens-todo-logo.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "250x55"
     }
   ],
   "start_url": ".",
