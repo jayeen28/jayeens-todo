@@ -1,6 +1,5 @@
 import React from 'react';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
-import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 
 interface singleTodo{
     _id:string,
