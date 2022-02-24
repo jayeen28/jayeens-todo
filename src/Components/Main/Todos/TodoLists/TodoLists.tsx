@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from '@mui/material';
 import SingleTodo from './SingleTodo';
 interface todo{
     _id:string,
@@ -13,13 +12,11 @@ const TodoLists = ({todos,setTodos}:{
 }) => {
     return (
         <div className='jtodo-container'>
-            <Container>
                 <ul className='jtodo-list-wrapper'>
                     {
                         todos.map(todo=><SingleTodo key={todo._id} todo={todo} todos={todos} setTodos={setTodos}/>)
                     }
                 </ul>
-            </Container>
         </div>
     );
 };

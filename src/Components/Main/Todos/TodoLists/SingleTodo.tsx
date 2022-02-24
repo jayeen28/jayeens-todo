@@ -1,5 +1,6 @@
 import React from 'react';
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 
 interface singleTodo{
     _id:string,
@@ -18,9 +19,10 @@ const SingleTodo = ({todo,todos,setTodos}:{todo:singleTodo,todos:singleTodo[],se
     return (
         <li className='jtodo-singleList-container'>
             <div className='jtodo-singleList-wrapper'>
+                {/* <DragIndicatorIcon fontSize='medium' className='todoDragIconWrapper'/> */}
                 <span className='todoNameWrapper'>{todo.todoName}</span>
                 <span className='todoDateWrapper'>{todo.todoDate}</span>
-                <span className='todoDeleteWrapper'><DeleteForeverOutlinedIcon sx={{cursor:'pointer'}} onClick={()=>{handleTodoDelete(todo._id)}}/></span>
+                <DeleteForeverOutlinedIcon className='todoDeleteWrapper' sx={{cursor:'pointer'}} onClick={()=>{handleTodoDelete(todo._id)}}/>
             </div>
         </li>
     );

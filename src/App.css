@@ -1,0 +1,52 @@
+form.addTodoFormWrapper>input::placeholder {
+    color: white;
+}
+
+form.addTodoFormWrapper>button {
+    cursor: pointer;
+}
+form.addTodoFormWrapper>input{
+    margin:10px 3px;
+}
+form.addTodoFormWrapper>input, form.addTodoFormWrapper>button {
+    border: 1px solid rgb(30, 73, 118);
+    background-color: rgb(0, 30, 60);
+    padding: 9px;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+}
+form.addTodoFormWrapper {
+    display: flex;
+    flex-direction: column;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.todosBody>div {
+    width: 100%;
+    margin:0 2%
+}
+.todosBody {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+}
+ul.jtodo-list-wrapper>li>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+ul.jtodo-list-wrapper>li {
+    margin: 10px 3px;
+    border: 1px solid rgb(30, 73, 118);
+    padding: 6px;
+    border-radius: 15px;
+}
+ul.jtodo-list-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import AddTodo from './AddTodo/AddTodo';
 import TodoHead from './TodoHead/TodoHead';
@@ -17,15 +18,22 @@ const Todos = () => {
         }
     },[])
     return (
-        <div>
-            <TodoHead />
+        <>
+        <TodoHead />
+        <div className='todosBody'>
             <AddTodo todos={todos} setTodos={setTodos}/>
+            <div className="JTodosWrapper">
+            <div className="JTodosHead">
+                <Typography variant='h6'>Todo list</Typography>
+            </div>
             {
                 todos.length?<TodoLists todos={todos} setTodos={setTodos}/>
                 :
                 <span>No toods found.</span>
             }
+            </div>
         </div>
+        </>
     );
 };
 
