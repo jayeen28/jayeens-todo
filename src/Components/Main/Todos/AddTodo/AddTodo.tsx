@@ -8,11 +8,16 @@ const AddTodo = ({todos,setTodos}:{
     const dateRef=useRef<HTMLInputElement>(null);
     const nameRef=useRef<HTMLInputElement>(null);
     const [showAlert,setShowAlert]=useState<boolean>(false);
+
+    /**
+     * This function is used for adding a single todo.
+     * @param e The on submit event.
+     */
     const handleSubmit=(e:any)=>{
         e.preventDefault();
         if(nameRef.current&&dateRef.current){
-            if(nameRef.current.value&&dateRef.current.value){
-                const _id=Date.now()+'jayeensTodo'
+            if(nameRef.current.value&&dateRef.current.value){//if all the values are given then add or show alert.
+            const _id=Date.now()+'jayeensTodo'//create a unique id for the todo.
             const todoName:string=nameRef.current.value;
             const todoDate:string=dateRef.current.value;
             const preparedTodo:object={todoName,todoDate,_id};

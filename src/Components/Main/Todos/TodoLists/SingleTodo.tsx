@@ -7,12 +7,16 @@ interface singleTodo{
     todoDate:string
 }
 const SingleTodo = ({todo,todos,setTodos}:{todo:singleTodo,todos:singleTodo[],setTodos:Function}) => {
+    /**
+     * This function is used for deleting a single todo item.
+     * @param id The unique id of the todo.
+     */
     const handleTodoDelete=(id:string)=>{
-        const cloneTodos:singleTodo[]=[...todos];
-        const todoIndex:number=cloneTodos.findIndex(todoData=>todoData._id===id)
-        cloneTodos.splice(todoIndex,1);
-        setTodos(cloneTodos);
-        localStorage.setItem('jayeens-todos',JSON.stringify(cloneTodos))
+        const cloneTodos:singleTodo[]=[...todos];//deep clone todo so that it doesn't keep reference.
+        const todoIndex:number=cloneTodos.findIndex(todoData=>todoData._id===id)//find the index of the targeted todo.
+        cloneTodos.splice(todoIndex,1);//remove todo from cloned data
+        setTodos(cloneTodos);//set new todos in to state.
+        localStorage.setItem('jayeens-todos',JSON.stringify(cloneTodos))//set new todos in to local storage.
     }
 
     return (
